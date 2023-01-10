@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html>
-    <title>CryptoApp</title>
-
+<html lang="it">
+    <head>
+        <meta charset="utf-8"></meta>
+        <title>CryptoApp</title>
+    </head>
     <style>
         body {
             margin: 0px !important; 
         }
 
         .header-index  {
-            width: 100%;
-            height: max-content;
             background-color: rgba(0,0,255, 0.70);
             padding: 1% 0% 2% 0%;
             text-align: center !important;
@@ -25,10 +25,19 @@
         }
 
     </style>
-    <body>
-        <div class="header-index">
+    <body onload="screenRes();">
+        <div class="header-index" id="header-index">
             <h1 class="header-index header-index-text">CryptoTab</h1>
             <h3 class="header-index header-index-text" style="font-size: large; visibility: hidden;">ricevi notifiche sulle tue<br>cripto preferite</h3>
         </div>        
     </body>
+
+    <script>
+        function screenRes() {
+            var width = window.screen.width * window.devicePixelRatio;
+            var height = window.screen.height * window.devicePixelRatio;
+
+            document.getElementById("header-index").style.width = width;
+        }
+    </script>
 </html>
