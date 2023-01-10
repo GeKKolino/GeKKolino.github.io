@@ -45,14 +45,12 @@
     </body>
 
     <script type="text/javascript">
-
         var testo = document.getElementById("io");
 
         function screenRes() {
-            if(screen.availWidth <= 1170) {
+            if(screen.availWidth <= 1920) {
                 testo.innerHTML = "avaible width: "+screen.availWidth+"; innerWidth: "+innerWidth+"; screen width: "+screen.width+";";
-
-                document.getElementsByClassName("header-index").style.width = innerWidth+"px";
+                document.getElementsByClassName("header-index").style.width = innerWidth+"px !important";
             }
         }
     </script>
