@@ -39,12 +39,12 @@
 
     <script>
         function screenRes() {
-            var width = window.screen.width;
-            var height = window.screen.height;
+            var width = window.screen.width * window.devicePixelRatio;
+            var height = window.screen.height * window.devicePixelRatio;
 
             var onePercent = (width * 1) / 100;
 
-            document.getElementById("header-index-id").style.width = (width)+"px";
+            document.getElementById("header-index-id").style.width = width+"px";
             document.getElementById("div").style.height = height+"px";
             document.getElementById("div").style.width = width+"px";
             document.getElementById("io").innerHTML= " "+width+" x "+height;
