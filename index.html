@@ -32,16 +32,6 @@
             width: 100vw;
             height: 100vh;
         }
-
-        @media screen and (max-width: 1170px) {
-            .header-index {
-                width: 1170px;
-            }
-
-            .header-index-text {
-                font-size: 400%;
-            }
-        }
         
 
     </style>
@@ -56,8 +46,9 @@
 
     <script>
         function screenRes() {
-            var width = window.screen.width * window.devicePixelRatio;
-            var height = window.screen.height * window.devicePixelRatio;
+            if(screen.availWidth <= 1170) {
+                document.getElementsByClassName("header-index").style.width = window.innerWidth+"px";
+            }
         }
     </script>
 </html>
