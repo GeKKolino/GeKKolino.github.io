@@ -40,14 +40,19 @@
             <h1 class="header-index header-index-text">CryptoTab</h1>
             <h3 class="header-index header-index-text" style="font-size: large; visibility: hidden;">ricevi notifiche sulle tue<br>cripto preferite</h3>
         </div> 
-        <div id="div" style="background-color: white;"><span id="io">qaaaa</span></div>   
+        <div id="div" style="background-color: white;"><span id="io"></span></div>   
             
     </body>
 
-    <script>
+    <script type="text/javascript">
+
+        var testo = document.getElementById("io");
+
         function screenRes() {
             if(screen.availWidth <= 1170) {
-                document.getElementsByClassName("header-index").style.width = window.innerWidth+"px";
+                testo.innerHTML = "avaible width: "+screen.availWidth+"; innerWidth: "+innerWidth+"; screen width: "+screen.width+";";
+
+                document.getElementsByClassName("header-index").style.width = innerWidth+"px";
             }
         }
     </script>
