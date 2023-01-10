@@ -1,55 +1,31 @@
 <!DOCTYPE html>
-<html lang="it">
+<html>
     <head>
         <meta charset="utf-8"></meta>
-        <title>CryptoApp</title>
-    </head>
-    <style>
-        body {
-            margin: 0px !important; 
-        }
-
-        .header-index  {
-            width: auto;
-            box-sizing: border-box;
-            background-color: rgba(0,0,255, 0.70);
-            padding: 1% 0% 2% 0%;
-            text-align: center !important;
-            overflow: hidden;
-            z-index: 1;
-        }
-
-        .header-index-text{
-            font-weight: bold;
-            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            color: rgba(255, 255, 255, 1);
-            background-color: rgba(0,0,0, 0);
-            font-size: 600%;
-            padding: 1% 0% 1% 0%;
-            margin: 0%;
-        }
-        
-
-    </style>
-    <body onload="screenRes();">
-        <div class="header-index" id="header-index-id">
-            <h1 class="header-index header-index-text">CryptoTab</h1>
-            <h3 class="header-index header-index-text" style="font-size: large; visibility: hidden;">ricevi notifiche sulle tue<br>cripto preferite</h3>
-        </div> 
-        <div id="div" style="background-color: white;"><span id="io"></span></div>   
-            
-    </body>
-
-    <script type="text/javascript">
-        var testo = document.getElementById("io");
-        var isSafari = navigator.userAgent.indexOf("Safari");
-
-        testo.innerHTML = "avaible width: "+screen.availWidth+"; innerWidth: "+innerWidth+"; screen width: "+screen.width+";";
-
-        function screenRes() {
-            if(screen.availWidth <= 1920 && isSafari != -1) {
-                document.getElementsByClassName("header-index").style.width = (window.innerWidth+2)+"px !important";
+        <title>CryptoTab</title>
+        <style type="text/css">
+            body {
+                margin: 0;
             }
-        }
-    </script>
+
+            .header-index {
+                background-color: blue;
+                text-align: center;
+            }
+
+            #h1-header {
+                font-weight: bold;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                font-size: xx-large;
+                color: white;
+                margin-block: 0;
+                padding: 2% 0%;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="header-index">
+            <h1 id="h1-header" class="header-index">CryptoTab</h1>
+        </div>
+    </body>
 </html>
