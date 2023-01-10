@@ -7,7 +7,7 @@
     <style>
         body {
             margin: 0px !important; 
-            overflow-x: hidden !important;
+            background-color: rgba(0,0,255, 0.70);
         }
 
         .header-index  {
@@ -32,18 +32,20 @@
         <div class="header-index" id="header-index-id">
             <h1 class="header-index header-index-text">CryptoTab</h1>
             <h3 class="header-index header-index-text" style="font-size: large; visibility: hidden;">ricevi notifiche sulle tue<br>cripto preferite</h3>
-        </div>    
-        <span id="io"></span>    
+        </div> 
+        <div id="div" style="background-color: white;"><span id="io"></span></div>   
+            
     </body>
 
     <script>
         function screenRes() {
-            var width = window.screen.width * window.devicePixelRatio;
-            var height = window.screen.height * window.devicePixelRatio;
+            var width = window.screen.width;
+            var height = window.screen.height;
 
             var onePercent = (width * 1) / 100;
 
             document.getElementById("header-index-id").style.width = width + onePercent;
+            document.getElementById("div").style.height = height;
             document.getElementById("io").innerHTML= " "+width+" x "+height;
         }
     </script>
