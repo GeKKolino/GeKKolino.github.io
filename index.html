@@ -10,6 +10,7 @@
         }
 
         .header-index  {
+            width: 100vw;
             box-sizing: border-box;
             background-color: rgba(0,0,255, 0.70);
             padding: 1% 0% 2% 0%;
@@ -26,13 +27,18 @@
             margin: 0%;
         }
 
+        .div {
+            width: 100vw;
+            height: 100vh;
+        }
+
     </style>
     <body onload="screenRes();">
         <div class="header-index" id="header-index-id">
             <h1 class="header-index header-index-text">CryptoTab</h1>
             <h3 class="header-index header-index-text" style="font-size: large; visibility: hidden;">ricevi notifiche sulle tue<br>cripto preferite</h3>
         </div> 
-        <div id="div" style="background-color: white;"><span id="io"></span></div>   
+        <div id="div" style="background-color: white;"><span id="io">qaaaa</span></div>   
             
     </body>
 
@@ -40,10 +46,6 @@
         function screenRes() {
             var width = window.screen.width * window.devicePixelRatio;
             var height = window.screen.height * window.devicePixelRatio;
-
-            
-            document.getElementById("div").style.height = height+"px";
-            document.getElementById("div").style.width = width+"px";
         }
     </script>
 </html>
