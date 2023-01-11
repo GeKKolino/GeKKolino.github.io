@@ -4,41 +4,39 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>CryptoTab</title>
-        <style type="text/css">
-            *{
-                margin: 0px !important;
-            }
-            #h1-header-index{
-                font-weight: bold;
-                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-                font-size:xxx-large;
-                color: white;
-                margin-block: 0;
-                padding: 4% 0%;
-            }
-        </style>
+        <link rel="stylesheet" href="CSS/index.css">
     </head>
     <body onload="screenRes();">
         <header id="header-index" style="background-color: rgba(0,0,255, 0.70); text-align: center;">
             <h1 id="h1-header-index" class="header-index">CryptoTab</h1>
         </header>
         <section>
-            <div id="container" style="background-color: white;">
-                
+            <div id="container">
+                <div class="container-sidebar" id="container-left"></div>
+                <div class="container-center" id="container-center"></div>
+                <div class="container-sidebar" id="container-right"></div>
+            </div>
+        </section>
+        <section>
+            <div>
+                <div class="container-bottom"></div>
             </div>
         </section>
     </body>
 
     <script type="text/javascript">
-        var width = screen.availWidth;
-        var height = screen.availHeight;
+        var width = innerWidth;
+        var height = innerHeight;
         var pixelRatio = screen.devicePixelRatio;
         var headerHeight = document.getElementById('header-index').clientHeight;
 
         function screenRes() {
+            document.getElementById('container-left').style.height = (height-headerHeight)+"px";
+            document.getElementById('container-center').style.height = (height-headerHeight)+"px";
+            document.getElementById('container-right').style.height = (height-headerHeight)+"px";
+
             if(devicePixelRatio>1) {                
                 document.getElementsByTagName('meta')["viewport"].content = "width=device-width, initial-scale="+devicePixelRatio+".0";
-                document.getElementById('container').style.height = (height-headerHeight)+"px";
             }
         }
         
