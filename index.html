@@ -1,16 +1,12 @@
 <!DOCTYPE html>
 <html lang="it">
     <head>
-        <meta charset="utf-8"></meta>
+        <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>CryptoTab</title>
         <style type="text/css">
             body {
                 margin: 0;
-            }
-
-            .header-index {
-                text-align: center;
             }
 
             #h1-header {
@@ -23,13 +19,23 @@
             }
         </style>
     </head>
-    <body>
-        <div class="header-index" style="background-color: rgba(0,0,255, 0.70);">
+    <body onload="screenRes();">
+        <header style="background-color: rgba(0,0,255, 0.70); text-align: center;">
             <h1 id="h1-header" class="header-index">CryptoTab</h1>
-        </div>
+        </header>
     </body>
 
     <script type="text/javascript">
-        document.getElementsByName("viewport")
+        var width = availWidth;
+        var height = availHeight;
+        var pixelRatio = devicePixelRatio;
+
+        function screenRes() {
+            document.getElementById("h1-header").innerHTML = devicePixelRatio;
+            if(devicePixelRatio>1) {
+                ('meta[name=viewport]').replaceWith('<meta name="viewport content="width=device-width, initial-scale=6.0"');
+            }
+        }
+        
     </script>
 </html>
