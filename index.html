@@ -36,10 +36,6 @@
             document.getElementById('container-center').style.height = (height-headerHeight)+"px";
             document.getElementById('container-right').style.height = (height-headerHeight)+"px";
             document.getElementById('cioa').innerHTML = screen.availWidth+"x"+screen.availHeight;
-
-            if(devicePixelRatio>1) {                
-                document.getElementsByTagName('meta')["viewport"].content = "width=device-width, initial-scale="+devicePixelRatio+".0";
-            }
         }
         
     </script>
