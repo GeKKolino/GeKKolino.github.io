@@ -1,9 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>How to put PHP in HTML - Simple Example</title>
 </head>
-<body>
-<h1><?php echo "This message is from server side." ?></h1>
-</body>
+<script>
+function fire() {
+    var url = "http://ipinfo.io/json?callback=func";
+    var script = document.createElement('script');
+    script.src = url;
+    script.async = true;
+    document.getElementsByTagName('head')[0].appendChild(script);
+}
+
+function func(response) {
+    alert(response.hostname); // for example hostname
+}
+
+document.onload = fire();
+</script>
+
 </html>
